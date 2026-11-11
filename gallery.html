@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nossos Momentos 💕</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="blur-in-start">
+
+  <div id="floating-bg"></div>
+
+  <!-- bolinhas de navegação no topo: página 2 de 4 -->
+  <nav class="page-nav">
+    <a href="index.html"></a>
+    <a href="gallery.html" class="active"></a>
+    <a href="reasons.html"></a>
+    <a href="letter.html"></a>
+  </nav>
+
+  <!-- ================================================================
+       PÁGINA 2 — CARROSSEL INTERATIVO DE FOTOS
+  ================================================================= -->
+  <section id="gallery" class="page">
+    <h2 class="gallery-heading">nossos momentos <span class="heart">🩷</span></h2>
+    <p class="gallery-sub">toque nas setas (ou deslize!) para ver mais</p>
+
+    <div class="slideshow-wrap">
+
+      <!-- ⬇ Pequeno GIF de decoração no canto (mantenha ou troque o arquivo) -->
+      <div class="corner-deco">
+        <img src="assets/sparkle1.gif" alt="decoração de brilho">
+      </div>
+
+      <div class="slide-stage">
+        <button class="arrow-btn" id="prevBtn" aria-label="foto anterior">‹</button>
+
+        <div class="photo-stage" id="photoStage">
+          <div class="polaroid" id="polaroid">
+            <div class="photo-frame">
+              <!-- ⬇ AS FOTOS REAIS SÃO CONFIGURADAS NO ARQUIVO js/gallery.js
+                   Esta é só a imagem inicial que carrega antes do script. -->
+              <img id="currentPhoto" src="photos/galeria1.jpeg" alt="nossa memória">
+            </div>
+          </div>
+
+          <!-- ⬇ GIF de decoração na parte inferior esquerda da polaroid -->
+          <div class="bottom-left-deco">
+            <img src="assets/sparkle2.gif" alt="decoração de brilho">
+          </div>
+        </div>
+
+        <button class="arrow-btn" id="nextBtn" aria-label="próxima foto">›</button>
+      </div>
+
+      <!-- Texto inicial (será substituído pelo js/gallery.js) -->
+      <p class="caption" id="currentCaption">Obrigado por fazer parte da minha vida... cada dia com você é um presente.</p>
+
+      <!-- Bolinhas indicadoras embaixo da foto -->
+      <div class="dots" id="dots">
+        <button class="dot active" data-index="0" aria-label="foto 1"></button>
+        <button class="dot" data-index="1" aria-label="foto 2"></button>
+        <button class="dot" data-index="2" aria-label="foto 3"></button>
+        <button class="dot" data-index="3" aria-label="foto 4"></button>
+      </div>
+
+      <p class="counter" id="counter">foto 1 de 4</p>
+    </div>
+
+    <!-- botões de navegação -->
+    <div class="page-buttons">
+      <a href="index.html" class="nav-btn secondary">&lt; voltar</a>
+      <a href="reasons.html" class="nav-btn">continuar &lt;3</a>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

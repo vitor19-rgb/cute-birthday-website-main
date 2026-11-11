@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz Nosso Dia 11! 🫶🏻</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="blur-in-start">
+
+  <div id="floating-bg"></div>
+
+  <!-- bolinhas de navegação no topo: página 1 de 4 -->
+  <nav class="page-nav">
+    <a href="index.html" class="active"></a>
+    <a href="gallery.html"></a>
+    <a href="reasons.html"></a>
+    <a href="letter.html"></a>
+  </nav>
+
+  <!-- ================================================================
+       PÁGINA 1 — INÍCIO
+  ================================================================= -->
+  <section id="hero" class="page">
+    <div class="hero-content">
+
+      <!-- ⬇⬇⬇ TROQUE O GIF AQUI (GIF de Boas-Vindas) ⬇⬇⬇ -->
+      <div class="gif-frame">
+        <img src="assets/hero.gif" alt="gif fofo de boas vindas">
+      </div>
+      <!-- ⬆⬆⬆ FIM DO GIF ⬆⬆⬆ -->
+
+      <h1 class="hero-title">feliz dia 11, meu <span>Amor!!</span> 💖</h1>
+      <p class="hero-subtitle">8 meses / 4 meses de namoro &lt;3</p>
+      
+      <!-- ⏱️ INÍCIO DO CRONÔMETRO (8 MESES) ⏱️ -->
+      <div id="time-counter" style="margin-top: 15px; font-family: 'Quicksand', sans-serif; font-size: 1.1rem; color: #555;">
+          <p style="margin: 0; font-weight: 500;">Nossa história começou há:</p>
+          <!-- A cor #ff6b81 é o rosa exato para combinar com o destaque -->
+          <p id="timer" style="font-weight: 700; font-size: 1.3rem; color: #ff6b81; margin: 5px 0;"></p>
+      </div>
+      <!-- ⏱️ FIM DO CRONÔMETRO ⏱️ -->
+
+      <div class="scroll-hint">↓</div>
+      <a href="gallery.html" class="nav-btn">abrir &lt;3</a>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+  
+  <!-- SCRIPT PARA O CRONÔMETRO FUNCIONAR EM TEMPO REAL -->
+  <script>
+    function updateTimer() {
+        // Data em que se conheceram (11 de Março de 2026)
+        const startDate = new Date("2026-03-11T00:00:00");
+        const now = new Date();
+        const diff = now - startDate;
+
+        // Cálculos matemáticos
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / 1000 / 60) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        // Exibindo o texto na tela
+        document.getElementById("timer").innerHTML =
+            days + " dias, " + hours + " horas, " + minutes + " min e " + seconds + " seg ❤️";
+    }
+    setInterval(updateTimer, 1000);
+    updateTimer();
+  </script>
+</body>
+</html>
